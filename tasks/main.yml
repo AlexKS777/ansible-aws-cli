@@ -10,8 +10,8 @@
   tags: 'aws-cli'
   become: 'yes'
   pip: >
-    name=awscli
-    state=latest
+    name=awscli==1.15.12
+    state=present
 
 - name: Set home directory of the user
   set_fact:
