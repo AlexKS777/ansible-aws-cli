@@ -63,7 +63,7 @@
     var: PIP_LIST
 
 - name: Test if cloud-init became broken
-  script: python -c "from urllib3.packages.ordered_dict import OrderedDict"
+  command: python -c "from urllib3.packages.ordered_dict import OrderedDict"
   register: urllib3_OUT
 
 - debug:
