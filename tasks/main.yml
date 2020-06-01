@@ -52,3 +52,12 @@
     owner={{ aws_cli_user }}
     group={{ aws_cli_group }}
     mode=0600
+
+- name: Check installed packages
+  tags: 'aws-cli'
+  become: 'yes'
+  script: pip list
+  register: PIP_LIST
+ 
+- debug:
+    var: PIP_LIST
