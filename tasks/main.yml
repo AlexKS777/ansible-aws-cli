@@ -56,7 +56,7 @@
 - name: Check installed packages
   tags: 'aws-cli'
   become: 'yes'
-  script: pip list
+  command: /usr/bin/pip list
   register: PIP_LIST
  
 - debug:
