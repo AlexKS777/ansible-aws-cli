@@ -13,6 +13,13 @@
     name=awscli==1.15.12
     state=present
 
+- name: 'Install urllib3'
+  tags: 'aws-cli'
+  become: 'yes'
+  pip: >
+    name=urllib3==1.22
+    state=present
+
 - name: Set home directory of the user
   set_fact:
     home_dir: /home/{{ aws_cli_user }}
